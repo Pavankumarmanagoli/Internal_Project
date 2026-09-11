@@ -10,7 +10,8 @@ export function SiteFooter() {
             What&rsquo;s Your <span className="text-primary">Green</span>
           </p>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            An educational look at how accessible, usable and leverageable your wealth really is.
+            Discover the flexibility behind your financial position and start a more informed
+            conversation about what comes next.
           </p>
           <p className="mt-3 text-xs text-muted-foreground">
             {METHODOLOGY.status} · v{METHODOLOGY.version}

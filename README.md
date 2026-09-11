@@ -36,10 +36,9 @@ npm run dev
 
 - `SITE_CONFIG.contactEmail` — business email (also shown in footer, privacy, book pages)
 - `SITE_CONFIG.contactPhone` — business phone
-- `SITE_CONFIG.bookingUrl` — scheduler URL; empty hides the "Choose a time" button
+- `SITE_CONFIG.bookingUrl` — demo Calendly URL; replace with the approved team calendar
 - `SITE_CONFIG.formSubmissionsStored` — set true only once real storage/email is connected
-- `SITE_CONFIG.about` — name, role and bio on the landing page
-- Landing page About photo — placeholder tile in `src/routes/index.tsx`
+- `SITE_CONFIG.contactPeople` — confirm spelling, roles and any approved individual details
 - Booking form submit handler in `src/routes/book.tsx` — no endpoint is connected
 - `/privacy` — placeholder notice, needs legal drafting and review
 - `/disclaimer` — placeholder wording, needs compliance review

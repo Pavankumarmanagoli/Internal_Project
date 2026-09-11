@@ -304,14 +304,10 @@ export const SITE_CONFIG = {
   contactEmail: "hello@example.com",
   /** PLACEHOLDER — replace with the real business phone number. */
   contactPhone: "(000) 000-0000",
-  /** PLACEHOLDER — external scheduler URL (Calendly, etc.). Empty hides the button. */
-  bookingUrl: "",
+  /** DEMO ONLY — replace with the approved Calendly event URL in the next version. */
+  bookingUrl: "https://calendly.com/placeholder/green-score-review",
   /** PLACEHOLDER — set true only once a real submission endpoint is connected. */
   formSubmissionsStored: false,
-  /** PLACEHOLDER — advisor/brand bio block on the landing page. */
-  about: {
-    name: "[Placeholder Name]",
-    role: "[Placeholder Role]",
-    bio: "[Placeholder bio — one short paragraph describing who runs What's Your Green and why this assessment exists. To be written and approved before launch.]",
-  },
+  /** Team members shown in Contact. Roles and individual details are pending approval. */
+  contactPeople: ["Nicolus Schultz", "Christen", "Dave"],
 } as const;

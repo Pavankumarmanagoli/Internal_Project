@@ -137,21 +137,50 @@ function LandingPage() {
 
       {/* About */}
       <section id="about" className="border-y border-border bg-sand">
-        <div className="container-page grid items-start gap-10 py-20 md:grid-cols-[auto_minmax(0,1fr)]">
-          <div
-            className="flex h-40 w-40 shrink-0 items-center justify-center rounded-3xl border border-dashed border-border bg-card text-center text-xs text-muted-foreground"
-            role="img"
-            aria-label="Placeholder photo — to be replaced before launch"
-          >
-            [Placeholder photo]
-          </div>
-          <div>
-            <h2 className="font-display text-3xl sm:text-4xl">About</h2>
-            <p className="mt-4 text-lg font-medium">{SITE_CONFIG.about.name}</p>
-            <p className="text-sm text-muted-foreground">{SITE_CONFIG.about.role}</p>
-            <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
-              {SITE_CONFIG.about.bio}
+        <div className="container-page py-20">
+          <div className="max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
+              About What&rsquo;s Your Green
             </p>
+            <h2 className="mt-3 font-display text-3xl leading-tight sm:text-4xl">
+              A clearer way to understand the flexibility behind your wealth
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+              What&rsquo;s Your Green is a guided financial-access assessment. It helps you look
+              beyond a single net-worth number and consider how readily your assets may be accessed,
+              used or leveraged when opportunities and life decisions arise.
+            </p>
+            <blockquote className="mt-8 border-l-2 border-primary pl-6 font-display text-2xl leading-relaxed text-foreground">
+              &ldquo;A strong financial position is not only about what you own. It is also about
+              how confidently your resources can support what comes next.&rdquo;
+            </blockquote>
+          </div>
+
+          <div className="mt-12">
+            <h3 className="font-display text-2xl">How we can help</h3>
+            <div className="mt-6 grid gap-5 md:grid-cols-3">
+              <article className="rounded-3xl border border-border bg-card p-6 shadow-soft">
+                <h4 className="text-lg font-medium">See your position clearly</h4>
+                <p className="mt-2 leading-relaxed text-muted-foreground">
+                  Turn approximate financial information into a simple, easy-to-understand Green
+                  Score.
+                </p>
+              </article>
+              <article className="rounded-3xl border border-border bg-card p-6 shadow-soft">
+                <h4 className="text-lg font-medium">Identify possible constraints</h4>
+                <p className="mt-2 leading-relaxed text-muted-foreground">
+                  Recognize where timing, penalties, taxes or asset structure may limit financial
+                  flexibility.
+                </p>
+              </article>
+              <article className="rounded-3xl border border-border bg-card p-6 shadow-soft">
+                <h4 className="text-lg font-medium">Start a useful conversation</h4>
+                <p className="mt-2 leading-relaxed text-muted-foreground">
+                  Use your result as a starting point for a review with an expert and explore the
+                  questions that matter to you.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -159,6 +188,27 @@ function LandingPage() {
       {/* Contact */}
       <section id="contact" className="container-page scroll-mt-24 py-20">
         <h2 className="font-display text-3xl sm:text-4xl">Contact</h2>
+        <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
+          Connect with the What&rsquo;s Your Green team to discuss your score and the questions it
+          raises.
+        </p>
+        <div className="mt-8 grid gap-5 sm:grid-cols-3">
+          {SITE_CONFIG.contactPeople.map((person) => (
+            <article
+              key={person}
+              className="rounded-3xl border border-border bg-card p-6 shadow-soft"
+            >
+              <div
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-forest-soft font-display text-lg text-primary"
+                aria-hidden
+              >
+                {person.charAt(0)}
+              </div>
+              <h3 className="mt-4 text-lg font-medium">{person}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">What&rsquo;s Your Green team</p>
+            </article>
+          ))}
+        </div>
         <dl className="mt-8 grid gap-5 sm:grid-cols-2">
           <div className="rounded-3xl border border-border bg-card p-6 shadow-soft">
             <dt className="text-sm text-muted-foreground">Business email [placeholder]</dt>
@@ -183,6 +233,24 @@ function LandingPage() {
             </dd>
           </div>
         </dl>
+        <div className="mt-8 rounded-3xl border border-border bg-sand p-7 sm:flex sm:items-center sm:justify-between sm:gap-8">
+          <div>
+            <h3 className="font-display text-2xl">Want to improve your Green Score?</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Book a call with an expert. The Calendly destination is a demo link for this version
+              and will be replaced with the approved calendar in the next release.
+            </p>
+          </div>
+          <a
+            href={SITE_CONFIG.bookingUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-5 inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-6 py-3 font-medium text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-forest-deep sm:mt-0"
+          >
+            Book a Call with an Expert
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </a>
+        </div>
       </section>
 
       {/* Final CTA */}

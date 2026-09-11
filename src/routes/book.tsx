@@ -86,14 +86,16 @@ function BookPage() {
       <div className="mt-8 rounded-3xl border border-dashed border-border bg-sand p-6">
         <p className="flex items-center gap-2 font-medium">
           <CalendarCheck className="h-5 w-5 text-primary" aria-hidden />
-          Booking link [placeholder]
+          Book a call with an expert
         </p>
         {SITE_CONFIG.bookingUrl ? (
           <a
             href={SITE_CONFIG.bookingUrl}
+            target="_blank"
+            rel="noreferrer"
             className="mt-4 inline-flex rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground"
           >
-            Choose a time
+            Open Calendly
           </a>
         ) : (
           <p className="mt-2 text-sm text-muted-foreground">
@@ -101,6 +103,10 @@ function BookPage() {
             time&rdquo; button here. Until then, use the request form below.
           </p>
         )}
+        <p className="mt-3 text-xs text-muted-foreground">
+          Demo Calendly link for V1. The approved team calendar will be connected in the next
+          version.
+        </p>
       </div>
 
       <form
